@@ -137,9 +137,8 @@ Todo.findById(hexId).then((todo)=>{
       .delete(`/todos/${hexId}`)
       .expect(404)
       .end(done);
-
   })
-  it('shoudl return 404 if objectid is invalid',(done)=>{
+  it('should return 404 if objectid is invalid',(done)=>{
     request(app)
       .delete('/todos/123abc')
       .expect(404)
